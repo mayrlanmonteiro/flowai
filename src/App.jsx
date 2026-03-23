@@ -16,7 +16,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-dark">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
