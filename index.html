@@ -1,17 +1,756 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowAI – Sites Profissionais que Colocam seu Negócio no Mapa Digital</title>
   <meta name="description"
-    content="FlowAI - Especialistas em criação de sites profissionais, landing pages e soluções digitais em Teresina - PI. Aumente suas vendas com um site premium." />
-  <meta name="theme-color" content="#0B0F1A" />
-  <title>FlowAI | Sites Profissionais em Teresina e Região</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    content="Criação de sites profissionais em Teresina. Sites institucionais, lojas virtuais e landing pages otimizados para converter.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-dark font-inter overflow-x-hidden">
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+          </svg>
+        </div>
+        <span>FlowAI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato" class="nav-cta">Fale Conosco</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid-bg"></div>
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Desenvolvimento Web em Teresina
+        </div>
+        <h1>Sites profissionais que colocam seu negócio no <span class="highlight">mapa digital</span>.</h1>
+        <p class="hero-description">Na FlowAI, criamos sites rápidos, bonitos e pensados para converter. Mais do que
+          pixels, construímos sua presença online com estratégia e tecnologia.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5586999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20FlowAI%20e%20gostaria%20de%20um%20or%C3%A7amento."
+            class="btn-primary" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            Solicitar orçamento grátis
+          </a>
+          <a href="#portfolio" class="btn-secondary">
+            <i class="fas fa-play-circle"></i>
+            Ver portfólio
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">+50</span>
+            <span class="hero-stat-label">Projetos entregues</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">98%</span>
+            <span class="hero-stat-label">Clientes satisfeitos</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">+5</span>
+            <span class="hero-stat-label">Anos de experiência</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-mockup">
+          <div class="mockup-topbar">
+            <div class="mockup-dot dot-red"></div>
+            <div class="mockup-dot dot-yellow"></div>
+            <div class="mockup-dot dot-green"></div>
+            <div class="mockup-url">
+              <i class="fas fa-lock"></i>
+              seusite.flowai.com.br
+            </div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-site-header">
+              <div class="mockup-site-logo"></div>
+              <div class="mockup-site-nav">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="mockup-hero-block">
+              <div class="line line-gradient-1"></div>
+              <div class="line line-gradient-2"></div>
+              <div class="line line-plain-1"></div>
+              <div class="line line-plain-2"></div>
+            </div>
+            <div class="mockup-btn-group">
+              <div class="mockup-btn-primary"></div>
+              <div class="mockup-btn-secondary"></div>
+            </div>
+            <div class="mockup-cards-row">
+              <div class="mockup-card">
+                <div class="mockup-card-icon"></div>
+                <div class="card-line"></div>
+                <div class="card-line card-line-short"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-icon"></div>
+                <div class="card-line"></div>
+                <div class="card-line card-line-short"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-icon"></div>
+                <div class="card-line"></div>
+                <div class="card-line card-line-short"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge badge-seo">
+          <div class="badge-icon badge-icon-green">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="badge-text">
+            <span class="badge-title">SEO Otimizado</span>
+            <span class="badge-sub">Apareça no Google</span>
+          </div>
+        </div>
+        <div class="float-badge badge-speed">
+          <div class="badge-icon badge-icon-purple">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="badge-text">
+            <span class="badge-title">99/100 Speed</span>
+            <span class="badge-sub">PageSpeed Score</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTADORES -->
+  <section class="counter-section">
+    <div class="container">
+      <div class="counter-grid">
+        <div class="counter-item reveal">
+          <div class="counter-number" data-target="50" data-suffix="+">0+</div>
+          <div class="counter-label">Projetos Entregues</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-1">
+          <div class="counter-number" data-target="98" data-suffix="%">0%</div>
+          <div class="counter-label">Satisfação dos Clientes</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-2">
+          <div class="counter-number" data-target="5" data-suffix="+">0+</div>
+          <div class="counter-label">Anos de Experiência</div>
+        </div>
+        <div class="counter-item reveal reveal-delay-3">
+          <div class="counter-number" data-target="24" data-suffix="h">0h</div>
+          <div class="counter-label">Suporte Disponível</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section benefits-section" id="beneficios">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Por que nos escolher</div>
+        <h2 class="section-title">Aumente suas vendas e autoridade em Teresina</h2>
+        <p class="section-subtitle">Ter um site profissional é mais do que estética — é estratégia para atrair clientes
+          e converter vendas.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon icon-purple"><i class="fas fa-search"></i></div>
+          <h3>Apareça no Google</h3>
+          <p>Seu site otimizado para aparecer nas primeiras posições do Google quando seus clientes buscam seus
+            serviços.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon icon-green"><i class="fas fa-shield-alt"></i></div>
+          <h3>Mais Credibilidade</h3>
+          <p>Transmita profissionalismo e ganhe a confiança dos seus clientes com um site moderno e bem estruturado.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon icon-blue"><i class="fas fa-globe-americas"></i></div>
+          <h3>Aberto 24 Horas</h3>
+          <p>Seu site trabalha por você, exibindo seus produtos, serviços e informações a qualquer hora do dia.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon icon-green"><i class="fas fa-chart-line"></i></div>
+          <h3>Marcas Especializadas</h3>
+          <p>Identidade visual única que representa sua marca de forma autêntica e memorável no mercado.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon icon-purple"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Acesse em Qualquer Tela</h3>
+          <p>Design totalmente responsivo que se adapta perfeitamente a celulares, tablets e desktops.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon icon-blue"><i class="fas fa-bullhorn"></i></div>
+          <h3>Canal Oficial</h3>
+          <p>Centralize sua comunicação em um canal profissional, sem depender apenas das redes sociais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=420&fit=crop&q=80"
+              alt="Equipe FlowAI trabalhando em projetos web" loading="lazy" width="600" height="420">
+            <div class="about-image-overlay"></div>
+          </div>
+          <div class="about-experience-badge">
+            <div class="exp-number">+5</div>
+            <div class="exp-text">Anos de<br>Experiência</div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <div class="section-label">Quem somos</div>
+          <h2 class="section-title">FlowAI: Tecnologia com toque humano em Teresina</h2>
+          <p class="about-text">Somos uma agência digital de Teresina focada em criar soluções web que realmente fazem a
+            diferença para o seu negócio. Combinamos design criativo, tecnologia de ponta e estratégias de marketing
+            para entregar resultados reais.</p>
+          <p class="about-text">Nossa abordagem é simples: ouvir, entender e criar soluções que seus clientes vão amar.
+            Cada projeto é único porque cada negócio é único.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-users"></i></div>
+              <div class="about-feature-text">
+                <strong>Processo Claro</strong>
+                <span>Acompanhe cada etapa do desenvolvimento</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-palette"></i></div>
+              <div class="about-feature-text">
+                <strong>Design Sob Medida</strong>
+                <span>Cada projeto é pensado para sua marca</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-code"></i></div>
+              <div class="about-feature-text">
+                <strong>Tecnologia de Ponta</strong>
+                <span>Frameworks modernos e código otimizado</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contato" class="btn-primary">Conheça nosso trabalho <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section services-section" id="servicos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Nossos serviços</div>
+        <h2 class="section-title">Soluções completas para sua presença digital</h2>
+        <p class="section-subtitle">Da criação à otimização, oferecemos tudo que seu negócio precisa para crescer online
+          de forma profissional.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-header">
+            <div class="service-icon-wrap svc-purple"><i class="fas fa-laptop-code"></i></div>
+            <span class="service-number">01</span>
+          </div>
+          <h3>Sites Institucionais</h3>
+          <p>Sites profissionais que representam sua empresa com elegância. Design personalizado, responsivo e otimizado
+            para converter visitantes em clientes.</p>
+          <div class="service-tags">
+            <span class="service-tag">Responsivo</span>
+            <span class="service-tag">SEO Friendly</span>
+            <span class="service-tag">Formulários</span>
+          </div>
+          <a href="#contato" class="service-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-header">
+            <div class="service-icon-wrap svc-green"><i class="fas fa-shopping-cart"></i></div>
+            <span class="service-number">02</span>
+          </div>
+          <h3>Lojas Virtuais</h3>
+          <p>E-commerce completo para vender online. Plataforma intuitiva, gateway de pagamento integrado e gestão de
+            estoque simplificada.</p>
+          <div class="service-tags">
+            <span class="service-tag">E-commerce</span>
+            <span class="service-tag">Pagamentos</span>
+            <span class="service-tag">Dashboard</span>
+          </div>
+          <a href="#contato" class="service-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-header">
+            <div class="service-icon-wrap svc-blue"><i class="fas fa-rocket"></i></div>
+            <span class="service-number">03</span>
+          </div>
+          <h3>Landing Pages</h3>
+          <p>Páginas de alta conversão para suas campanhas. Perfeitas para capturar leads, lançamentos e ações de
+            marketing digital.</p>
+          <div class="service-tags">
+            <span class="service-tag">Alta Conversão</span>
+            <span class="service-tag">A/B Testing</span>
+            <span class="service-tag">Funil de Vendas</span>
+          </div>
+          <a href="#contato" class="service-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-header">
+            <div class="service-icon-wrap svc-orange"><i class="fas fa-cogs"></i></div>
+            <span class="service-number">04</span>
+          </div>
+          <h3>Otimização & Suporte</h3>
+          <p>Seu site sempre rápido, seguro e atualizado. Oferecemos manutenção preventiva, backups, atualizações e
+            suporte técnico contínuo.</p>
+          <div class="service-tags">
+            <span class="service-tag">Performance</span>
+            <span class="service-tag">Segurança</span>
+            <span class="service-tag">Suporte 24/7</span>
+          </div>
+          <a href="#contato" class="service-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="section process-section" id="processo">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Como funciona</div>
+        <h2 class="section-title">Do briefing ao lançamento em 4 etapas</h2>
+        <p class="section-subtitle">Um processo simples, transparente e eficiente para transformar sua ideia em um site
+          profissional.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-line">
+          <div class="process-line-fill"></div>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="process-step-number">01</div>
+          <h3>Briefing</h3>
+          <p>Conversamos sobre seu negócio, público-alvo e objetivos para entender exatamente o que você precisa.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="process-step-number">02</div>
+          <h3>Design</h3>
+          <p>Criamos o layout do seu site com foco em estética, usabilidade e conversão. Você aprova antes de codificar.
+          </p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="process-step-number">03</div>
+          <h3>Desenvolvimento</h3>
+          <p>Transformamos o design em código limpo, responsivo e otimizado para SEO e performance.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="process-step-number">04</div>
+          <h3>Lançamento</h3>
+          <p>Publicamos seu site, realizamos testes finais e oferecemos suporte contínuo pós-lançamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Portfólio</div>
+        <h2 class="section-title">Projetos que geram resultados reais</h2>
+        <p class="section-subtitle">Confira alguns dos nossos trabalhos mais recentes e veja a qualidade que entregamos.
+        </p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal reveal-delay-1">
+          <div class="portfolio-image">
+            <div class="portfolio-image-placeholder">
+              <i class="fas fa-store"></i>
+              <span>E-commerce</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="category">Loja Virtual</span>
+            <h3>ModaFit Store</h3>
+            <p>E-commerce completo de moda fitness com integração de pagamentos.</p>
+          </div>
+        </div>
+        <div class="portfolio-card reveal reveal-delay-2">
+          <div class="portfolio-image">
+            <div class="portfolio-image-placeholder">
+              <i class="fas fa-utensils"></i>
+              <span>Restaurante</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="category">Site Institucional</span>
+            <h3>Sabor da Terra</h3>
+            <p>Site completo com cardápio digital e sistema de reservas online.</p>
+          </div>
+        </div>
+        <div class="portfolio-card reveal reveal-delay-3">
+          <div class="portfolio-image">
+            <div class="portfolio-image-placeholder">
+              <i class="fas fa-balance-scale"></i>
+              <span>Escritório</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" aria-label="Ver projeto"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="category">Landing Page</span>
+            <h3>Advocacia Lima & Souza</h3>
+            <p>Landing page de alta conversão para captação de clientes jurídicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section testimonials-section" id="depoimentos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Depoimentos</div>
+        <h2 class="section-title">O que nossos clientes dizem sobre nós</h2>
+        <p class="section-subtitle">A satisfação dos nossos clientes é o nosso maior orgulho.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-quote">&ldquo;</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">A FlowAI transformou completamente a presença online do meu restaurante. Recebi 3x
+            mais pedidos pelo site no primeiro mês. Simplesmente incrível!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RC</div>
+            <div class="testimonial-author-info">
+              <h4>Roberto Costa</h4>
+              <span>Sabor da Terra – Teresina</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-quote">&ldquo;</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">Profissionalismo do início ao fim. O site ficou lindo, rápido e meus clientes
+            adoraram. Minha credibilidade como advogada aumentou muito.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MS</div>
+            <div class="testimonial-author-info">
+              <h4>Maria Souza</h4>
+              <span>Advocacia Lima & Souza</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-quote">&ldquo;</div>
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">Minha loja virtual ficou perfeita! Fácil de gerenciar, bonita e as vendas
+            dispararam. A equipe da FlowAI é muito atenciosa e dedicada.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AF</div>
+            <div class="testimonial-author-info">
+              <h4>Ana Ferreira</h4>
+              <span>ModaFit Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREÇOS -->
+  <section class="section pricing-section" id="precos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Investimento</div>
+        <h2 class="section-title">Planos que cabem no seu orçamento</h2>
+        <p class="section-subtitle">Escolha o plano ideal para o momento do seu negócio. Todos incluem suporte e
+          garantia.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="pricing-name">Essencial</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">R$</span>
+            <span class="pricing-value">997</span>
+          </div>
+          <div class="pricing-period">Pagamento único</div>
+          <p class="pricing-description">Ideal para quem está começando e precisa de um site profissional básico.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Até 5 páginas</li>
+            <li><i class="fas fa-check"></i> Design responsivo</li>
+            <li><i class="fas fa-check"></i> Formulário de contato</li>
+            <li><i class="fas fa-check"></i> Otimização básica SEO</li>
+            <li><i class="fas fa-check"></i> Integração WhatsApp</li>
+            <li><i class="fas fa-check"></i> 30 dias de suporte</li>
+            <li class="disabled"><i class="fas fa-times"></i> Blog integrado</li>
+            <li class="disabled"><i class="fas fa-times"></i> Painel administrativo</li>
+          </ul>
+          <a href="#contato" class="pricing-btn pricing-btn-outline">Começar agora</a>
+        </div>
+        <div class="pricing-card featured reveal reveal-delay-2">
+          <div class="pricing-popular">Mais Popular</div>
+          <div class="pricing-name">Profissional</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">R$</span>
+            <span class="pricing-value">1.997</span>
+          </div>
+          <div class="pricing-period">Pagamento único</div>
+          <p class="pricing-description">Perfeito para empresas que querem se destacar com recursos avançados.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Até 10 páginas</li>
+            <li><i class="fas fa-check"></i> Design personalizado premium</li>
+            <li><i class="fas fa-check"></i> Blog integrado</li>
+            <li><i class="fas fa-check"></i> SEO avançado</li>
+            <li><i class="fas fa-check"></i> Painel administrativo</li>
+            <li><i class="fas fa-check"></i> Google Analytics</li>
+            <li><i class="fas fa-check"></i> 90 dias de suporte</li>
+            <li><i class="fas fa-check"></i> Domínio grátis 1 ano</li>
+          </ul>
+          <a href="#contato" class="pricing-btn pricing-btn-primary">Quero este plano</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-3">
+          <div class="pricing-name">Premium</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">R$</span>
+            <span class="pricing-value">3.497</span>
+          </div>
+          <div class="pricing-period">Pagamento único</div>
+          <p class="pricing-description">Para quem precisa de uma solução completa com e-commerce e automações.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Páginas ilimitadas</li>
+            <li><i class="fas fa-check"></i> E-commerce completo</li>
+            <li><i class="fas fa-check"></i> Gateway de pagamento</li>
+            <li><i class="fas fa-check"></i> Automações e integrações</li>
+            <li><i class="fas fa-check"></i> SEO completo + conteúdo</li>
+            <li><i class="fas fa-check"></i> Painel avançado</li>
+            <li><i class="fas fa-check"></i> 180 dias de suporte</li>
+            <li><i class="fas fa-check"></i> Treinamento incluso</li>
+          </ul>
+          <a href="#contato" class="pricing-btn pricing-btn-outline">Falar com consultor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Perguntas Frequentes</div>
+        <h2 class="section-title">Dúvidas? Nós respondemos</h2>
+        <p class="section-subtitle">As perguntas mais comuns sobre nossos serviços de criação de sites.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item active reveal">
+          <div class="faq-question">
+            <h3>Quanto tempo leva para criar um site?</h3>
+            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">O prazo varia conforme a complexidade do projeto. Um site institucional leva
+              de 7 a 15 dias úteis. Lojas virtuais e projetos mais complexos podem levar de 15 a 30 dias. Sempre
+              combinamos os prazos antes de iniciar.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-question">
+            <h3>Preciso ter domínio e hospedagem?</h3>
+            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Não se preocupe! Cuidamos de tudo isso para você. No plano Profissional e
+              Premium, o primeiro ano de domínio é por nossa conta. Também orientamos sobre as melhores opções de
+              hospedagem.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-question">
+            <h3>O site funciona bem no celular?</h3>
+            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim! Todos os nossos sites são 100% responsivos, ou seja, funcionam
+              perfeitamente em celulares, tablets e desktops. Testamos em diferentes dispositivos antes da entrega.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <div class="faq-question">
+            <h3>Vocês fazem manutenção após a entrega?</h3>
+            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim! Todos os planos incluem um período de suporte gratuito. Após esse
+              período, oferecemos planos de manutenção acessíveis para manter seu site sempre atualizado e seguro.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-4">
+          <div class="faq-question">
+            <h3>Quais formas de pagamento vocês aceitam?</h3>
+            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Aceitamos PIX, cartão de crédito (em até 12x), transferência bancária e
+              boleto. Também oferecemos condições especiais para pagamento à vista.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="section-label cta-label">Vamos conversar?</div>
+        <h2 class="section-title">Pronto para transformar sua presença digital?</h2>
+        <p class="section-subtitle">Fale com a gente agora e receba um orçamento personalizado para o seu projeto. Sem
+          compromisso!</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/5586999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20FlowAI%20e%20gostaria%20de%20um%20or%C3%A7amento."
+            class="btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            Chamar no WhatsApp
+          </a>
+          <a href="mailto:contato@flowai.com.br" class="btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Enviar e-mail
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <div class="logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+              </svg>
+            </div>
+            <span>FlowAI</span>
+          </a>
+          <p>Transformando negócios em Teresina através de soluções web profissionais, modernas e orientadas a
+            resultados.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#servicos">Sites Institucionais</a></li>
+            <li><a href="#servicos">Lojas Virtuais</a></li>
+            <li><a href="#servicos">Landing Pages</a></li>
+            <li><a href="#servicos">Otimização SEO</a></li>
+            <li><a href="#servicos">Suporte Técnico</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="tel:+5586999999999">(86) 9 9999-9999</a></li>
+            <li><a href="mailto:contato@flowai.com.br">contato@flowai.com.br</a></li>
+            <li><a href="#">Teresina – PI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FlowAI. Todos os direitos reservados.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5586999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20FlowAI%20e%20gostaria%20de%20um%20or%C3%A7amento."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+    <span class="pulse-ring"></span>
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
