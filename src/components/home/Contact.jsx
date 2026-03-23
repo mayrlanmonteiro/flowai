@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Send, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
     const [formState, setFormState] = useState({
@@ -9,6 +9,10 @@ const Contact = () => {
         whatsapp: '',
         message: ''
     });
+
+    const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+    const emailAddress = import.meta.env.VITE_EMAIL_ADDRESS;
+    const whatsappDisplay = import.meta.env.VITE_WHATSAPP_DISPLAY;
 
     const handleChange = (e) => {
         setFormState({
@@ -19,133 +23,124 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate sending to WhatsApp
-        const text = `Ol%C3%A1%2C%20me%20chamo%20${formState.name}.%20${formState.message}%20Meu%20email%20%C3%A9%20${formState.email}.`;
-        window.open(`https://wa.me/5586999527416?text=${text}`, '_blank');
+        const text = `Olá, me chamo ${formState.name}. ${formState.message} Meu WhatsApp é ${formState.whatsapp} e meu email é ${formState.email}.`;
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
     };
 
     return (
-        <section id="contato" className="section-padding bg-primary text-white relative">
-            <div className="absolute inset-0 bg-pattern opacity-[0.05] pointer-events-none"></div>
-
-            <div className="container relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-                    {/* CTA Final */}
+        <section id="contato" className="py-24 bg-dark-2 relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="grid md:grid-cols-2 gap-20">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
                     >
-                        <div className="mb-10">
-                            <span className="text-accent font-semibold tracking-wide uppercase text-sm">Vamos Conversar?</span>
-                            <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Pronto para ter um site profissional?
-                            </h2>
-                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                                Não perca mais clientes para a concorrência. Clique no botão ao lado ou preencha o formulário para receber um orçamento sem compromisso.
-                            </p>
+                        <span className="text-primary-light font-bold text-sm tracking-[3px] uppercase block mb-4">
+                            Contato
+                        </span>
+                        <h2 className="text-white text-3xl md:text-5xl font-black mb-8">
+                            Vamos transformar sua <span className="bg-gradient-primary bg-clip-text text-transparent">ideia em realidade</span>
+                        </h2>
+                        <p className="text-gray text-lg mb-12">
+                            Não perca mais tempo. Entre em contato agora e receba um orçamento personalizado para o seu projeto digital.
+                        </p>
 
-                            <div className="space-y-6">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                                        <Phone size={24} />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-gray-400 uppercase">WhatsApp / Telefone</p>
-                                        <p className="text-xl font-bold">(86) 9 9952-7416</p>
-                                    </div>
+                        <div className="space-y-8">
+                            <div className="flex gap-6 items-center group">
+                                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary-light group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300">
+                                    <Phone size={24} />
                                 </div>
-
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                                        <Mail size={24} />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-gray-400 uppercase">E-mail</p>
-                                        <p className="text-lg">mayrlan.alves22@gmail.com</p>
-                                    </div>
+                                <div>
+                                    <span className="text-gray text-xs font-bold uppercase tracking-widest block mb-1">WhatsApp</span>
+                                    <span className="text-white text-xl font-bold">{whatsappDisplay}</span>
                                 </div>
+                            </div>
 
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent">
-                                        <MapPin size={24} />
-                                    </div>
-                                    <div>
-                                        <p className="text-xs text-gray-400 uppercase">Localização</p>
-                                        <p className="text-lg">Teresina – Piauí (Atendimento Global)</p>
-                                    </div>
+                            <div className="flex gap-6 items-center group">
+                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                                    <Mail size={24} />
+                                </div>
+                                <div>
+                                    <span className="text-gray text-xs font-bold uppercase tracking-widest block mb-1">E-mail</span>
+                                    <span className="text-white text-xl font-bold">{emailAddress}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-6 items-center group">
+                                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary-light group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300">
+                                    <MapPin size={24} />
+                                </div>
+                                <div>
+                                    <span className="text-gray text-xs font-bold uppercase tracking-widest block mb-1">Localização</span>
+                                    <span className="text-white text-xl font-bold">Teresina, Piauí</span>
                                 </div>
                             </div>
                         </div>
                     </motion.div>
 
-                    {/* Form */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="bg-white rounded-2xl p-8 text-gray-800 shadow-2xl"
+                        className="bg-dark p-8 md:p-12 rounded-[40px] border border-dark-3 shadow-2xl"
                     >
-                        <h3 className="text-2xl font-bold mb-6 text-primary">Solicite um Orçamento</h3>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formState.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all"
-                                    placeholder="Seu nome"
-                                />
+                        <h3 className="text-white text-2xl font-black mb-8">Envie uma mensagem</h3>
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="text-gray-400 text-xs font-bold uppercase tracking-widest block mb-3">Seu Nome</label>
+                                    <input 
+                                        type="text" 
+                                        name="name"
+                                        value={formState.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full bg-dark-2 border border-dark-3 rounded-xl px-4 py-4 text-white outline-none focus:border-primary transition-colors" 
+                                        placeholder="Nome Completo"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="text-gray-400 text-xs font-bold uppercase tracking-widest block mb-3">WhatsApp</label>
+                                    <input 
+                                        type="tel" 
+                                        name="whatsapp"
+                                        value={formState.whatsapp}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full bg-dark-2 border border-dark-3 rounded-xl px-4 py-4 text-white outline-none focus:border-primary transition-colors" 
+                                        placeholder="(00) 00000-0000"
+                                    />
+                                </div>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                <input
-                                    type="email"
+                                <label className="text-gray-400 text-xs font-bold uppercase tracking-widest block mb-3">E-mail Corporativo</label>
+                                <input 
+                                    type="email" 
                                     name="email"
                                     value={formState.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all"
+                                    className="w-full bg-dark-2 border border-dark-3 rounded-xl px-4 py-4 text-white outline-none focus:border-primary transition-colors" 
                                     placeholder="seu@email.com"
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
-                                <input
-                                    type="tel"
-                                    name="whatsapp"
-                                    value={formState.whatsapp}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all"
-                                    placeholder="(86) 9 9999-9999"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Como podemos ajudar?</label>
-                                <textarea
+                                <label className="text-gray-400 text-xs font-bold uppercase tracking-widest block mb-3">Sobre o seu projeto</label>
+                                <textarea 
                                     name="message"
                                     value={formState.message}
                                     onChange={handleChange}
-                                    rows="4"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all"
-                                    placeholder="Gostaria de um orçamento para..."
+                                    required
+                                    rows="4" 
+                                    className="w-full bg-dark-2 border border-dark-3 rounded-xl px-4 py-4 text-white outline-none focus:border-primary transition-colors resize-none" 
+                                    placeholder="Conte um pouco sobre o que você precisa..."
                                 ></textarea>
                             </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-accent hover:bg-accent-hover text-primary font-bold py-4 rounded-lg shadow-lg hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                            <button 
+                                type="submit" 
+                                className="w-full bg-gradient-primary text-white font-black py-5 rounded-2xl shadow-[0_10px_30px_rgba(108,58,237,0.3)] hover:scale-[1.02] transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
                             >
-                                Enviar Solicitação <Send size={18} />
+                                Enviar Orçamento <Send size={18} />
                             </button>
-
-                            <p className="text-xs text-center text-gray-400 mt-4">
-                                Ao enviar, você concorda em ser contatado via WhatsApp ou E-mail.
-                            </p>
                         </form>
                     </motion.div>
                 </div>

@@ -1,44 +1,48 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
     {
         name: 'Ana Silva',
         role: 'Sócia da Clínica SaúdePlena',
         content: 'O site mudou a percepção dos nossos pacientes. Ficou muito profissional e os agendamentos pelo WhatsApp aumentaram na primeira semana.',
-        stars: 5,
-        location: 'Teresina, PI'
+        stars: 5
     },
     {
         name: 'Carlos Mendes',
         role: 'Restaurante Sabor do Rio',
         content: 'A equipe da FlowAI entendeu exatamente o que eu queria. O cardápio digital é rápido e meus clientes adoram. Recomendo demais!',
-        stars: 5,
-        location: 'Timon, MA'
+        stars: 5
     },
     {
         name: 'João Ferreira',
-        role: 'Contador',
-        content: 'Finalmente saí apenas do Instagram. Agora tenho um lugar profissional para mostrar meus serviços e artigos. O suporte deles é nota 10.',
-        stars: 5,
-        location: 'Teresina, PI'
+        role: 'Contador Freelancer',
+        content: 'Finalmente saí apenas do Instagram. Agora tenho um lugar profissional para mostrar meus serviços. O suporte deles é fantástico.',
+        stars: 5
     }
 ];
 
 const Testimonials = () => {
     return (
-        <section className="section-padding bg-primary text-white relative overflow-hidden">
-            {/* Background patterns */}
-            <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px]"></div>
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]"></div>
-
-            <div className="container relative z-10">
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <span className="text-accent font-semibold tracking-wide uppercase text-sm">Depoimentos</span>
-                    <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-                        O que dizem nossos clientes
-                    </h2>
+        <section id="depoimentos" className="py-24 bg-dark-2 relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <motion.span 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="text-primary-light font-bold text-sm tracking-[3px] uppercase block mb-4"
+                    >
+                        Depoimentos
+                    </motion.span>
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-white text-3xl md:text-5xl font-black mb-6"
+                    >
+                        O que dizem <span className="bg-gradient-primary bg-clip-text text-transparent">nossos clientes</span>
+                    </motion.h2>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
@@ -47,25 +51,25 @@ const Testimonials = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm relative"
+                            className="p-8 rounded-3xl bg-dark border border-dark-3 relative"
                         >
-                            <Quote className="absolute top-6 right-6 text-white/10" size={40} />
-
-                            <div className="flex gap-1 mb-4">
+                            <Quote className="text-primary-light/20 absolute top-8 right-8" size={48} />
+                            <div className="flex gap-1 mb-6">
                                 {[...Array(item.stars)].map((_, i) => (
-                                    <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                                    <Star key={i} size={16} className="text-accent fill-accent" />
                                 ))}
                             </div>
-
-                            <p className="text-gray-300 italic mb-6 leading-relaxed">"{item.content}"</p>
-
-                            <div className="pt-4 border-t border-white/10">
-                                <h4 className="font-bold text-white">{item.name}</h4>
-                                <div className="flex justify-between items-center text-sm">
-                                    <span className="text-gray-400">{item.role}</span>
-                                    <span className="text-accent text-xs">{item.location}</span>
+                            <p className="text-gray text-lg leading-relaxed mb-8 relative z-10">
+                                "{item.content}"
+                            </p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    {item.name.charAt(0)}
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold">{item.name}</h4>
+                                    <p className="text-primary-light text-sm">{item.role}</p>
                                 </div>
                             </div>
                         </motion.div>

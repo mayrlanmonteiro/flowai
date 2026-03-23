@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -8,73 +8,79 @@ const Footer = () => {
     const emailAddress = import.meta.env.VITE_EMAIL_ADDRESS;
 
     return (
-        <footer className="bg-primary text-gray-300 pt-10 pb-6 md:pt-16 md:pb-8">
-            <div className="container grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-8 mb-8 md:mb-12">
-                {/* Brand - Span 2 cols on very small screens, 1 on others if desired, but sticking to grid-cols-2 for layout match */}
-                <div className="col-span-2 xs:col-span-1 md:col-span-1 space-y-3 md:space-y-4">
-                    <Link to="/" className="block">
-                        <img src="/logo.jpg" alt="FlowAI Logo" className="h-10 md:h-12 w-auto object-contain brightness-0 invert" />
-                    </Link>
-                    <p className="text-xs md:text-sm leading-relaxed text-gray-400">
-                        Estúdio digital especializado em criação de sites profissionais para negócios de Teresina e região.
-                        Tecnologia e estratégia unidas para gerar resultados.
+        <footer className="bg-dark pt-24 pb-12 relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="grid md:grid-cols-4 gap-12 mb-16">
+                    <div className="col-span-1 md:col-span-1">
+                        <Link to="/" className="text-3xl font-black text-white tracking-tighter mb-6 block">
+                            Flow<span className="text-primary-light">AI</span>
+                        </Link>
+                        <p className="text-gray text-sm leading-relaxed mb-8">
+                            Especialistas em criar sites que transformam visitantes em clientes fiéis através de design premium e tecnologia de ponta.
+                        </p>
+                        <div className="flex gap-4">
+                            <a href="#" className="w-10 h-10 bg-dark-2 border border-dark-3 rounded-full flex items-center justify-center text-gray hover:text-primary-light hover:border-primary-light transition-all">
+                                <Instagram size={18} />
+                            </a>
+                            <a href="#" className="w-10 h-10 bg-dark-2 border border-dark-3 rounded-full flex items-center justify-center text-gray hover:text-primary-light hover:border-primary-light transition-all">
+                                <Linkedin size={18} />
+                            </a>
+                            <a href="#" className="w-10 h-10 bg-dark-2 border border-dark-3 rounded-full flex items-center justify-center text-gray hover:text-primary-light hover:border-primary-light transition-all">
+                                <Facebook size={18} />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[3px]">Serviços</h4>
+                        <ul className="space-y-4">
+                            <li><a href="#servicos" className="text-gray text-sm hover:text-primary-light transition-colors">Sites Institucionais</a></li>
+                            <li><a href="#servicos" className="text-gray text-sm hover:text-primary-light transition-colors">Landing Pages</a></li>
+                            <li><a href="#servicos" className="text-gray text-sm hover:text-primary-light transition-colors">Loja Virtual</a></li>
+                            <li><a href="#servicos" className="text-gray text-sm hover:text-primary-light transition-colors">Sistemas Web</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[3px]">Empresa</h4>
+                        <ul className="space-y-4">
+                            <li><a href="#sobre" className="text-gray text-sm hover:text-primary-light transition-colors">Sobre Nós</a></li>
+                            <li><a href="#beneficios" className="text-gray text-sm hover:text-primary-light transition-colors">Benefícios</a></li>
+                            <li><a href="#portfolio" className="text-gray text-sm hover:text-primary-light transition-colors">Portfólio</a></li>
+                            <li><a href="#contato" className="text-gray text-sm hover:text-primary-light transition-colors">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[3px]">Contato</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-center gap-3 text-gray text-sm">
+                                <Phone size={18} className="text-primary-light" />
+                                {whatsappDisplay}
+                            </li>
+                            <li className="flex items-center gap-3 text-gray text-sm">
+                                <Mail size={18} className="text-primary-light" />
+                                {emailAddress}
+                            </li>
+                            <li className="flex items-center gap-3 text-gray text-sm">
+                                <MapPin size={18} className="text-primary-light" />
+                                Teresina, Piauí
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="pt-8 border-t border-dark-3 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-gray-500 text-xs">
+                        &copy; {currentYear} FlowAI Soluções Digitais. Todos os direitos reservados.
                     </p>
-
-                </div>
-
-                {/* Links */}
-                <div>
-                    <h3 className="text-white font-bold mb-3 md:mb-4 text-sm md:text-base">Links Rápidos</h3>
-                    <ul className="space-y-2 text-xs md:text-sm">
-                        <li><a href="/#home" className="hover:text-accent transition-colors">Início</a></li>
-                        <li><a href="/#sobre" className="hover:text-accent transition-colors">Sobre</a></li>
-                        <li><a href="/#servicos" className="hover:text-accent transition-colors">Serviços</a></li>
-                        <li><a href="/#portfolio" className="hover:text-accent transition-colors">Portfólio</a></li>
-                        <li><Link to="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
-                        <li><a href="/#contato" className="hover:text-accent transition-colors">Contato</a></li>
-                    </ul>
-                </div>
-
-                {/* Services */}
-                <div>
-                    <h3 className="text-white font-bold mb-3 md:mb-4 text-sm md:text-base">Serviços</h3>
-                    <ul className="space-y-2 text-xs md:text-sm">
-                        <li className="hover:text-accent transition-colors">Sites Institucionais</li>
-                        <li className="hover:text-accent transition-colors">Lojas Virtuais</li>
-                        <li className="hover:text-accent transition-colors">Landing Pages</li>
-                        <li className="hover:text-accent transition-colors">Otimização SEO</li>
-                        <li className="hover:text-accent transition-colors">Identidade Visual</li>
-                    </ul>
-                </div>
-
-                {/* Contact */}
-                <div className="col-span-2 md:col-span-1">
-                    <h3 className="text-white font-bold mb-3 md:mb-4 text-sm md:text-base">Contato</h3>
-                    <ul className="space-y-3 text-xs md:text-sm">
-                        <li className="flex items-center gap-3">
-                            <Phone size={18} className="text-accent" />
-                            <span>{whatsappDisplay}</span>
-                        </li>
-                        <li className="flex items-center gap-3">
-                            <Mail size={18} className="text-accent" />
-                            <span>{emailAddress}</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <MapPin size={18} className="text-accent shrink-0" />
-                            <span>Teresina – Piauí</span>
-                        </li>
-                    </ul>
+                    <div className="flex gap-8">
+                        <a href="#" className="text-gray-500 text-xs hover:text-white transition-colors">Política de Privacidade</a>
+                        <a href="#" className="text-gray-500 text-xs hover:text-white transition-colors">Termos de Uso</a>
+                    </div>
                 </div>
             </div>
-
-            {/* Bottom */}
-            <div className="container pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-                <p>&copy; {currentYear} FlowAI Soluções Digitais. Todos os direitos reservados.</p>
-                <div className="flex justify-center gap-4 mt-2">
-                    <a href="#" className="hover:text-white">Política de Privacidade</a>
-                    <a href="#" className="hover:text-white">Termos de Uso</a>
-                </div>
-            </div>
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
         </footer>
     );
 };

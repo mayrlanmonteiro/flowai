@@ -9,23 +9,27 @@ import Benefits from '../components/home/Benefits';
 import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
 import Contact from '../components/home/Contact';
+import Pricing from '../components/home/Pricing';
+import Comparison from '../components/home/Comparison';
 
 const Home = () => {
     return (
         <>
             <Helmet>
-                <title>FlowAI | Sites que geram resultados em Teresina e Região</title>
-                <meta name="description" content="Desenvolvimento de sites profissionais, lojas virtuais e landing pages em Teresina. Foco em conversão, design moderno e resultados para seu negócio." />
+                <title>FlowAI | Sites Profissionais em Teresina e Região</title>
+                <meta name="description" content="Especialistas em criação de sites, landing pages e lojas virtuais em Teresina. Transformamos sua presença digital em resultados reais." />
                 <link rel="canonical" href="https://flowai.com.br/" />
             </Helmet>
 
             <main>
                 <Hero />
-                <Benefits />
-                <About />
                 <Services />
+                <About />
+                <Benefits />
+                <Comparison />
                 <Process />
                 <Portfolio />
+                <Pricing />
                 <Testimonials />
                 <FAQ />
                 <Contact />

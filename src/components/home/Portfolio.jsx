@@ -1,69 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ExternalLink } from 'lucide-react';
 
 const projects = [
     {
-        id: 1,
-        client: 'Modelo FlowAI Premium',
-        category: 'Template Alta Conversão',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-        result: 'Design Otimizado para Vendas',
-        link: '/portfolio/template-premium'
+        title: 'Clínica Odontológica',
+        category: 'Site Institucional',
+        image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+        title: 'Advocacia de Sucesso',
+        category: 'Landing Page',
+        image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+        title: 'E-commerce de Moda',
+        category: 'Loja Virtual',
+        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop'
     }
 ];
 
 const Portfolio = () => {
     return (
-        <section id="portfolio" className="section-padding bg-white">
-            <div className="container">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                    <div className="max-w-xl">
-                        <span className="text-secondary font-semibold tracking-wide uppercase text-sm">Nosso Trabalho</span>
-                        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-primary">
-                            Projetos que dão resultado
-                        </h2>
-                    </div>
-                    <div>
-                        <Link to="/portfolio" className="inline-flex items-center gap-2 font-bold text-primary hover:text-accent transition-colors border-b-2 border-accent pb-1">
-                            Ver todos os projetos <ArrowUpRight size={18} />
-                        </Link>
-                    </div>
+        <section id="portfolio" className="py-24 bg-dark relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <motion.span 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="text-primary-light font-bold text-sm tracking-[3px] uppercase block mb-4"
+                    >
+                        Nosso Portfólio
+                    </motion.span>
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-white text-3xl md:text-5xl font-black mb-6"
+                    >
+                        Projetos que geram <span className="bg-gradient-primary bg-clip-text text-transparent">resultados reais</span>
+                    </motion.h2>
                 </div>
 
-                <div className="grid grid-cols-1">
+                <div className="grid md:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer max-w-2xl mx-auto"
+                            className="group relative rounded-3xl overflow-hidden bg-dark-2 border border-dark-3 aspect-[4/5] cursor-pointer"
                         >
-                            <Link to={project.link} className="block w-full h-full">
-                                {/* Image */}
-                                <div className="aspect-video overflow-hidden bg-gray-200">
-                                    <img
-                                        src={project.image}
-                                        alt={project.client}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
+                            <img 
+                                src={project.image} 
+                                alt={project.title} 
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-80"></div>
+                            <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span className="text-primary-light text-xs font-bold uppercase tracking-widest mb-2 block">{project.category}</span>
+                                <h3 className="text-white text-2xl font-black mb-4">{project.title}</h3>
+                                <div className="flex items-center gap-2 text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    Ver projeto <ExternalLink size={16} className="text-primary-light" />
                                 </div>
-
-                                {/* Overlay Content */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                                    <span className="text-accent font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 tracking-wider uppercase">{project.category}</span>
-                                    <h3 className="text-3xl font-bold text-white mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">{project.client}</h3>
-                                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100 flex items-center justify-between">
-                                        <span className="bg-white/20 text-white px-4 py-2 rounded-lg backdrop-blur-sm font-medium">{project.result}</span>
-                                        <div className="bg-accent text-primary p-2 rounded-full">
-                                            <ArrowUpRight size={24} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

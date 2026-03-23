@@ -1,71 +1,105 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Target, Heart, Share2 } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="sobre" className="section-padding bg-gray-50 overflow-hidden">
-            <div className="container grid lg:grid-cols-2 gap-12 items-center">
-                {/* Image / Visuals */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="relative"
-                >
-                    <div className="relative z-10 bg-white p-2 rounded-2xl shadow-xl transform rotate-1">
-                        <img
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                            alt="Equipe trabalhando em projeto digital"
-                            className="rounded-xl w-full h-auto object-cover grayscale transition-all hover:grayscale-0 duration-500"
-                        />
-                    </div>
-                    {/* Decorative Elements */}
-                    <div className="absolute top-10 -left-10 w-24 h-24 bg-accent/20 rounded-full blur-xl"></div>
-                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl"></div>
-                </motion.div>
+        <section id="sobre" className="py-24 bg-dark-2 relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="grid md:grid-cols-2 gap-[80px] items-center">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        className="relative"
+                    >
+                        <div className="relative z-10 rounded-[30px] overflow-hidden border-8 border-dark-3 shadow-2xl">
+                            <img 
+                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
+                                alt="Equipe FlowAI" 
+                                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                            />
+                        </div>
+                        <div className="absolute -bottom-10 -right-10 bg-gradient-primary p-8 rounded-3xl shadow-xl z-20 hidden md:block">
+                            <div className="text-white text-center">
+                                <span className="block text-4xl font-black mb-1">05+</span>
+                                <span className="text-xs font-bold uppercase tracking-widest opacity-80">Anos de Mercado</span>
+                            </div>
+                        </div>
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-[80px]"></div>
+                    </motion.div>
 
-                {/* Text Content */}
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <span className="text-secondary font-semibold tracking-wide uppercase text-sm">Sobre Nós</span>
-                    <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 text-primary">
-                        FlowAI: Tecnologia com toque humano em Teresina
-                    </h2>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                        Nascemos com a missão de modernizar o mercado digital de Piauí. Somos um estúdio que une design premium, estratégia de negócios e inteligência artificial para criar soluções que realmente funcionam.
-                    </p>
-                    <p className="text-gray-600 mb-8 leading-relaxed">
-                        Não entregamos apenas código; entregamos parceira. Entendemos a realidade dos pequenos e médios negócios locais e oferecemos um atendimento próximo, transparente e sem "tecniquês" complicado.
-                    </p>
+                    <div>
+                        <motion.span 
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className="text-primary-light font-bold text-sm tracking-[3px] uppercase block mb-4"
+                        >
+                            Sobre a FlowAI
+                        </motion.span>
+                        <motion.h2 
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-white text-3xl md:text-5xl font-black mb-8 leading-tight"
+                        >
+                            Tecnologia com toque humano em <span className="bg-gradient-primary bg-clip-text text-transparent">Teresina</span>
+                        </motion.h2>
+                        <motion.p 
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="text-gray text-lg leading-relaxed mb-10"
+                        >
+                            Nascemos com o propósito de modernizar a presença digital dos negócios no Piauí. Não somos apenas uma agência de tecnologia, somos parceiros estratégicos que utilizam IA e Design de ponta para criar experiências memoráveis.
+                        </motion.p>
 
-                    <div className="space-y-4">
-                        <div className="flex items-start gap-3">
-                            <div className="bg-green-100 p-1 rounded text-green-600 mt-1"><Check size={16} /></div>
-                            <div>
-                                <h4 className="font-bold text-primary">Processo Claro</h4>
-                                <p className="text-sm text-gray-500">Você acompanha cada etapa, sem surpresas.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                            <div className="bg-blue-100 p-1 rounded text-blue-600 mt-1"><Check size={16} /></div>
-                            <div>
-                                <h4 className="font-bold text-primary">Design Sob Medida</h4>
-                                <p className="text-sm text-gray-500">Nada de templates prontos e genéricos.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                            <div className="bg-purple-100 p-1 rounded text-purple-600 mt-1"><Check size={16} /></div>
-                            <div>
-                                <h4 className="font-bold text-primary">Tecnologia de Ponta</h4>
-                                <p className="text-sm text-gray-500">Usamos IA para otimizar tempo e qualidade.</p>
-                            </div>
+                        <div className="grid gap-6">
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                className="flex gap-5 p-5 bg-dark border border-dark-3 rounded-2xl transition-all hover:border-primary/30"
+                            >
+                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary-light shrink-0">
+                                    <Target size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Nossa Missão</h4>
+                                    <p className="text-gray text-sm">Colocar cada negócio local no mapa digital com sites de alta performance.</p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.1 }}
+                                className="flex gap-5 p-5 bg-dark border border-dark-3 rounded-2xl transition-all hover:border-primary/30"
+                            >
+                                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent shrink-0">
+                                    <Heart size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Nossos Valores</h4>
+                                    <p className="text-gray text-sm">Transparência, inovação constante e foco total no resultado do cliente.</p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="flex gap-5 p-5 bg-dark border border-dark-3 rounded-2xl transition-all hover:border-primary/30"
+                            >
+                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary-light shrink-0">
+                                    <Share2 size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Atendimento Próximo</h4>
+                                    <p className="text-gray text-sm">Suporte humanizado e ágil, entendendo a realidade da sua empresa.</p>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -1,96 +1,68 @@
 import React from 'react';
-import { MessageCircle, FileText, PenTool, Code, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const steps = [
     {
-        id: 1,
-        icon: <MessageCircle size={24} />,
-        title: '1. Conversa Inicial',
-        description: 'Entendemos seu negócio, público e objetivos em uma reunião rápida.'
+        title: 'Briefing Inicial',
+        description: 'Entendemos a fundo seu negócio, objetivos e público-alvo para criar uma estratégia vencedora.'
     },
     {
-        id: 2,
-        icon: <FileText size={24} />,
-        title: '2. Proposta Clara',
-        description: 'Você recebe um orçamento detalhado, sem surpresas ou letras miúdas.'
+        title: 'Design Criativo',
+        description: 'Desenvolvemos o layout exclusivo focado na experiência do usuário e na identidade da sua marca.'
     },
     {
-        id: 3,
-        icon: <PenTool size={24} />,
-        title: '3. Design e Layout',
-        description: 'Criamos o visual do site e ajustamos até ficar como você sonhou.'
+        title: 'Desenvolvimento',
+        description: 'Transformamos o design em código de alta performance, utilizando as tecnologias mais modernas.'
     },
     {
-        id: 4,
-        icon: <Code size={24} />,
-        title: '4. Desenvolvimento',
-        description: 'Programamos tudo para ser rápido, seguro e funcional no celular.'
-    },
-    {
-        id: 5,
-        icon: <Rocket size={24} />,
-        title: '5. Entrega e Suporte',
-        description: 'Seu site vai ao ar e damos todo o suporte inicial necessário.'
+        title: 'Lançamento',
+        description: 'Realizamos todos os testes finais e colocamos seu novo site no ar com total segurança.'
     }
 ];
 
 const Process = () => {
-    const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
     return (
-        <section id="processo" className="section-padding bg-primary text-white relative overflow-hidden">
-            {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform origin-top-right"></div>
-
-            <div className="container relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+        <section id="processo" className="py-24 bg-dark-2 relative overflow-hidden">
+            <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+                <div className="text-center mb-20">
+                    <motion.span 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="text-primary-light font-bold text-sm tracking-[3px] uppercase block mb-4"
                     >
-                        <span className="text-accent font-semibold tracking-wide uppercase text-sm">Como funciona</span>
-                        <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
-                            Do zero ao site no ar em 5 passos simples
-                        </h2>
-                        <p className="text-gray-300 text-lg mb-8">
-                            Na FlowAI, nós cuidamos da parte técnica chata. Você só precisa nos contar sobre seu negócio e aprovar o resultado. É simples assim.
-                        </p>
+                        Como Trabalhamos
+                    </motion.span>
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-white text-3xl md:text-5xl font-black mb-6"
+                    >
+                        Do zero ao <span className="bg-gradient-primary bg-clip-text text-transparent">site no ar</span> em 4 passos
+                    </motion.h2>
+                </div>
 
-                        <a
-                            href={`https://wa.me/${whatsappNumber}`}
-                            className="inline-block bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-white transition-colors"
+                <div className="grid md:grid-cols-4 gap-8 relative">
+                    {/* Connection Line */}
+                    <div className="hidden md:block absolute top-[40px] left-[50px] right-[50px] h-[2px] bg-dark-4 z-0"></div>
+                    
+                    {steps.map((step, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="relative z-10 text-center"
                         >
-                            Começar meu projeto
-                        </a>
-                    </motion.div>
-
-                    {/* Timeline Steps */}
-                    <div className="space-y-6">
-                        {steps.map((step, index) => (
-                            <motion.div
-                                key={step.id}
-                                initial={{ opacity: 0, x: 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="flex gap-4 group"
-                            >
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 rounded-full border-2 border-accent/30 bg-primary flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-primary transition-colors z-10 relative">
-                                        {step.icon}
-                                    </div>
-                                    {index !== steps.length - 1 && (
-                                        <div className="w-0.5 h-full bg-accent/20 my-2 group-hover:bg-accent/50 transition-colors"></div>
-                                    )}
-                                </div>
-                                <div className="pb-8">
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{step.title}</h3>
-                                    <p className="text-gray-400">{step.description}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                            <div className="w-20 h-20 bg-dark border-4 border-dark-3 rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-8 transition-all hover:scale-110 hover:border-primary">
+                                {index + 1}
+                            </div>
+                            <h3 className="text-white text-xl font-bold mb-4">{step.title}</h3>
+                            <p className="text-gray text-sm leading-relaxed">
+                                {step.description}
+                            </p>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
