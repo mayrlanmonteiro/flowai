@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="FlowAI - Desenvolvimento de sites profissionais e soluções digitais em Teresina - PI. Aumente suas vendas com um site moderno e otimizado." />
+  <meta name="theme-color" content="#0F172A" />
+  <title>FlowAI | Sites que geram resultados em Teresina</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.addEventListener('error', function (event) {
+      var message = event.message || "Unknown error";
+      var div = document.createElement('div');
+      div.style.position = 'fixed';
+      div.style.top = '0';
+      div.style.left = '0';
+      div.style.width = '100%';
+      div.style.backgroundColor = '#ffebee';
+      div.style.color = '#c62828';
+      div.style.padding = '20px';
+      div.style.zIndex = '9999';
+      div.style.fontFamily = 'monospace';
+      div.innerHTML = '<strong>Error:</strong> ' + message;
+      document.body.appendChild(div);
+    });
+  </script>
+</body>
+
+</html>
