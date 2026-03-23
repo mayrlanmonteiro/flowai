@@ -5,7 +5,6 @@ import About from '../components/home/About';
 import Services from '../components/home/Services';
 import Process from '../components/home/Process';
 import Portfolio from '../components/home/Portfolio';
-import Pricing from '../components/home/Pricing';
 import Benefits from '../components/home/Benefits';
 import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
@@ -28,7 +27,6 @@ const Home = () => {
                 <Process />
                 <Portfolio />
                 <Testimonials />
-                <Pricing />
                 <FAQ />
                 <Contact />
             </main>
