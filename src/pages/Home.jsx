@@ -9,7 +9,6 @@ import Benefits from '../components/home/Benefits';
 import Testimonials from '../components/home/Testimonials';
 import FAQ from '../components/home/FAQ';
 import Contact from '../components/home/Contact';
-import Pricing from '../components/home/Pricing';
 import Comparison from '../components/home/Comparison';
 
 const Home = () => {
@@ -29,7 +28,6 @@ const Home = () => {
                 <Comparison />
                 <Process />
                 <Portfolio />
-                <Pricing />
                 <Testimonials />
                 <FAQ />
                 <Contact />
