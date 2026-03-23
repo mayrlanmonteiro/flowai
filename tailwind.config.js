@@ -39,14 +39,17 @@ export default {
                 'gradient-primary': 'linear-gradient(135deg, #6C3AED, #06D6A0)',
                 'gradient-card': 'linear-gradient(145deg, rgba(108,58,237,0.08), rgba(6,214,160,0.05))',
             },
+            spacing: {
+                '4.5': '1.125rem',
+            },
             animation: {
                 'float-slow': 'floatBadge 4s ease-in-out infinite',
                 'float-delayed': 'floatBadge 4s ease-in-out infinite 1.5s',
             },
             keyframes: {
                 floatBadge: {
-                    '0%, 100%': { transform: translateY(0) },
-                    '50%': { transform: translateY(-12px) },
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-12px)' },
                 }
             }
         },
