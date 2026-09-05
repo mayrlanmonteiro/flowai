@@ -332,14 +332,13 @@ img {
     overflow: hidden;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 50px;
-    align-items: center;
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero-text h1 {
+.hero-content h1 {
     font-size: clamp(40px, 4.8vw, 60px);
     font-weight: 800;
     line-height: 1.15;
@@ -348,170 +347,22 @@ img {
     letter-spacing: -1px;
 }
 
-.hero-text p {
+.hero-content p {
     font-size: 18px;
     color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 36px;
-    max-width: 540px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-actions {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-/* HERO VISUAL MOCKUP COMPOSITION */
-.hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-card-main {
-    background: var(--white);
-    border-radius: 28px;
-    padding: 24px;
-    box-shadow: var(--shadow-card);
-    border: 1px solid var(--border-subtle);
-    position: relative;
-    width: 100%;
-    max-width: 440px;
-    background: linear-gradient(145deg, #FFFFFF 0%, #FFFBF8 100%);
-}
-
-.mockup-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #F1F5F9;
-    margin-bottom: 20px;
-}
-
-.mockup-dots {
-    display: flex;
-    gap: 6px;
-}
-
-.mockup-dots span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #E2E8F0;
-}
-
-.mockup-dots span:nth-child(1) { background: #FF5F56; }
-.mockup-dots span:nth-child(2) { background: #FFBD2E; }
-.mockup-dots span:nth-child(3) { background: #27C93F; }
-
-.mockup-body {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.hero-scene {
-    background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%);
-    border-radius: 20px;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-scene-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: var(--white);
-    color: var(--primary-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 0 10px 25px rgba(124, 179, 66, 0.2);
-    margin-bottom: 12px;
-}
-
-.hero-scene-tag {
-    background: var(--white);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--primary-green);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* Floating Elements around Hero Scene */
-.floating-badge {
-    position: absolute;
-    background: var(--white);
-    padding: 12px 18px;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    font-weight: 700;
-    z-index: 10;
-    border: 1px solid var(--border-subtle);
-    animation: floatAnim 4s ease-in-out infinite alternate;
-}
-
-.float-bulb {
-    top: -20px;
-    left: -20px;
-    animation-delay: 0s;
-}
-
-.float-target {
-    top: 20px;
-    right: -25px;
-    animation-delay: 1.5s;
-}
-
-.float-chart {
-    bottom: -20px;
-    right: 10px;
-    animation-delay: 0.8s;
-}
-
-.badge-icon-orange {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    background: var(--primary-green-light);
-    color: var(--primary-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.badge-icon-green {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    background: var(--badge-green-bg);
-    color: var(--badge-green-icon);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-@keyframes floatAnim {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-12px); }
 }
 
 /* EXPERTISES / SERVICES SECTION */
@@ -1107,16 +958,16 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .hero-grid, .methodology-grid, .why-us-grid {
+    .methodology-grid, .why-us-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .hero-text, .methodology-content, .why-us-content {
+    .methodology-content, .why-us-content {
         text-align: center;
     }
 
-    .hero-text p, .methodology-content p.section-sub, .why-us-content p.section-sub {
+    .methodology-content p.section-sub, .why-us-content p.section-sub {
         margin-left: auto;
         margin-right: auto;
     }

@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll(
-        '.service-card, .step-item, .why-feature-row, .testimonial-card, .section-header, .hero-text, .hero-visual, .cta-banner'
+        '.service-card, .step-item, .why-feature-row, .testimonial-card, .section-header, .hero-content, .cta-banner'
     ).forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(24px)';
