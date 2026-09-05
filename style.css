@@ -255,7 +255,18 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-flow {
+    color: var(--primary-green);
+}
+
+.logo-ai {
+    color: var(--primary-blue);
 }
 
 .logo-img {
@@ -1017,8 +1028,15 @@ img {
 }
 
 .footer-brand .logo {
-    color: var(--white);
     margin-bottom: 16px;
+}
+
+.footer-brand .logo-flow {
+    color: var(--primary-green);
+}
+
+.footer-brand .logo-ai {
+    color: #90CAF9;
 }
 
 .footer-brand p {
